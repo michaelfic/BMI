@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function preLoad() {
+          a1 = new Image; a1.src = 'man.svg';  
+          a2 = new Image; a2.src = 'woman.svg';
+        }
+        function im(image) {
+          document.getElementById(image[0]).src = eval(image + ".src")
+        }
+        </script>
+</head>
+<body onLoad="preLoad()">
+    <form autocomplete="off">
+      <input type="radio" name="1" onClick="im('a1');" checked>
+      <input type="radio" name="1" onClick="im('a2');">
+      <input type="radio" name="1" onClick="im('a3');">
+    </form>
+    <img id="a" width="802" height="602" alt="">
+    </body>
+</html>
